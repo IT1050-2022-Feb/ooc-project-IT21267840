@@ -1,6 +1,8 @@
 #include"NonRegisteredCustomer.h"
 #include <iostream>
 #include <cstring>
+#include "manager.h"
+#include "review.h"
 using namespace std;
 
 int main(){
@@ -20,3 +22,19 @@ int main(){
     return 0;
 
 }
+ manager *manager1;
+    manager1 = new manager();//manager
+//calling methods of manager class
+    manager1->updateManagerDetails();
+    manager1->deleteManagerDetails();
+    manager1->displayManagerDetails();
+
+ //calling methods of review class
+    review1->displayReview();
+
+delete manager1;
+delete review1;
+ return 0;
+
+}
+     
