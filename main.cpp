@@ -1,7 +1,8 @@
-#include"NonRegisteredCustomer.h"
-#include "hotel.h"
 #include <iostream>
 #include <cstring>
+#include"NonRegisteredCustomer.h"
+#include "hotel.h"
+#include "Admin.h"
 #include "manager.h"
 #include "review.h"
 using namespace std;
@@ -14,6 +15,8 @@ int main(){
    
     NonRegisteredCustomer *nonRegCust1;
     nonRegCust1 = new NonRegisteredCustomer(); //Object-RegisteredCustomer class
+     Admin *admin1;
+    admin1 = new Admin();//admin
 
      /*calling  Methods */
   
@@ -29,6 +32,9 @@ int main(){
     nonRegCust1->registerdCustomer();
     nonRegCust1->displayDetails();
 
+     //calling methhods of admin class
+      admin1->setdetails();
+      admin1->Displaydetails();
   //Deleting dynamic objects
     delete nonRegCust1;
   
@@ -49,6 +55,7 @@ int main(){
     delete hotel1;
     delete manager1;
     delete review1;
+    delete admin1;
 
 
  return 0;
